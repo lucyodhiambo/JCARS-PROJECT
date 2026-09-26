@@ -37,6 +37,7 @@ The JCars data was imported into a PostgreSQL database hosted on Aiven.
 DBeaver was used as the database management and development environment. The cleaned JCars data was loaded into PostgreSQL and organized into fact and dimension tables.
 
 The database follows a **star schema** structure, with the main sales fact table connected to supporting dimension tables.
+In powerbi, select getdata,select on more, choose database and select Postgresql database and connect. Then you will be required to key in credentials like the server(localhost) and the database(Jcars_Project). When completed, import, select your required tables and Load.
 
 ### Main Fact Table
 
@@ -97,7 +98,7 @@ SUM(Facts_Jcar_sales[Units Sold])
 
 ### Total Orders
 Total Orders =
-DISTINCTCOUNT(Facts_Jcar_sales[Order ID])
+DISTINCTCOUNT(Facts_Jcar_sales[Order_id])
 
 ### Total Gross Profit
 Total Gross Profit =
